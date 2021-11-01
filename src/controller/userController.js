@@ -54,7 +54,7 @@ const userController = {
   login: async (req, res, next) => {
       try {
         const { user, pass } = req.body;
-        const usr = await userModel.findUser(user,pass)
+        const usr = await userModel.findUser(user.toLowerCase(),pass)
         if(!usr)  res.redirect('/sign')
         if( usr.Rol_id==1)
               res.redirect('/users')
