@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const {userController} = require('../controller')
-const {location} = require('../middleware')
+//const {location} = require('../middleware')
 
 /* GET users listing. */
-router.post('/',location,userController.createUser);
+router.post('/',userController.createUser);
 
-
+router.post('/login',userController.login);
+  
 module.exports = router;

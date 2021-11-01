@@ -1,25 +1,33 @@
-const {userRepository} = require('../database/model')
+const { User, Provincias } = require("../database/models");
 
 module.exports = {
-
-    getUsers: async () => {
-        const users = await userRepository.find().exec()
-        return users
-    },
-    createUser: async (user) => {
-        const dataBaseUser = new userRepository(user)
-        await dataBaseUser.save()
-        return dataBaseUser
-        
-    },
-    updateUser: async (user) => {
-        return null
-    },
-    deleteUser: async (user) => {
-        return null
-    },
-    findUser: async (user) => {
-        return null
-    }
-
-}
+  getUsers: async () => {
+    const users = await User.findAll({
+      include: {
+        model: Provincias,
+        attributes: ["nombre"],
+        as: "Provincia",
+      },
+    });
+    return users;
+  },
+  createUser: async (user) => {
+    const result = await User.create(user);
+    return true;
+  },
+  updateUser: async (user) => {
+    return null;
+  },
+  deleteUser: async (user) => {
+    return null;
+  },
+  findUser: async (user, password) => {
+    const users = await User.findOne ({
+      where: {
+        mail: user,
+        password: password,
+      },
+    });
+    return users ;
+  },
+};
