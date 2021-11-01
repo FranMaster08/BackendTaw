@@ -61,9 +61,9 @@
 
 .Principal article div{
 	height: 100px;
-	width: 100px;
+	width: 120px;
 	background:white;
-	margin: 10px;
+	margin: 5px;
 	border-radius: 10px;
     box-shadow: 0px 2px 4px 4px rgba(0,0,0,0.33);
 	overflow: hidden;
