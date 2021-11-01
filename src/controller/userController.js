@@ -55,7 +55,7 @@ const userController = {
       try {
         const { user, pass } = req.body;
         const usr = await userModel.findUser(user,pass)
-        if(!usr) throw "Credenciales Incorrectas"
+        if(!usr)  res.redirect('/sign')
         if( usr.Rol_id==1)
               res.redirect('/users')
         if( usr.Rol_id==2)
