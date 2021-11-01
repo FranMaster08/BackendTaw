@@ -6,6 +6,7 @@
     "start": "node src/index"
   },
   "dependencies": {
+    "admin-lte": "^2.4.10",
     "axios": "^0.23.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",

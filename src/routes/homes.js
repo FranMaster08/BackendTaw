@@ -22,6 +22,10 @@ router.get('/principal', function (req, res, next) {
   res.render('principal');
 });
 
+router.get("/dashboardv1", function(req, res, next) {
+  res.render("dashboard-v1");
+});
+
 router.get('/users',userController.getUsers);
 
 module.exports = router ;
