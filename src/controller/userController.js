@@ -18,7 +18,7 @@ const userController = {
         direccion: address,
         fechaNacimiento: birthday,
         password: password,
-        mail: email,
+        mail: email.toLowerCase(),
         Provincias_id:1,
         telefono,
         Rol_id:2,
