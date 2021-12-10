@@ -9,14 +9,14 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/sign', function (req, res, next) {
+router.get('/sign',expressLayout, function (req, res, next) {
   res.render('login', { title: 'Express' });
 });
 router.get('/sigout', function (req, res, next) {
   res.render('login', { title: 'Express' });
 });
 
-router.get('/register', function (req, res, next) {
+router.get('/register', expressLayout,function (req, res, next) {
   res.render('register');
 });
 router.get('/principal', function (req, res, next) {
