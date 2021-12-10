@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/sign',expressLayout, function (req, res, next) {
+router.get('/sign', function (req, res, next) {
   res.render('login', { title: 'Express' });
 });
 router.get('/sigout', function (req, res, next) {
