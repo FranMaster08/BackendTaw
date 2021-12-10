@@ -298,9 +298,12 @@ $(document).ready(function(){
 					</tr>
 				</thead>
 				<tbody>
+					<% if (usuarios) { %>
           <% usuarios.forEach(function(user){ %>
             <%- include('../partial/tableUser', {user: user}) %>
           <% }); %>
+		  <% } %>
+
 				</tbody>
 			</table>
 			<div class="clearfix">

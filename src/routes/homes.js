@@ -1,6 +1,7 @@
 const express = require('express');
 const { userController } = require('../controller')
 const router = express.Router();
+const expressLayout = require('express-ejs-layouts')
 //const {auth} = require('../middleware')
 
 /* GET home page. */
@@ -22,10 +23,10 @@ router.get('/principal', function (req, res, next) {
   res.render('principal');
 });
 
-router.get("/dashboardv1", function(req, res, next) {
-  res.render("dashboard-v1");
+router.get("/dashboard",expressLayout, function(req, res, next) {
+  res.render("dashboard");
 });
 
-router.get('/users',userController.getUsers);
+router.get('/users',expressLayout,userController.getUsers);
 
 module.exports = router ;

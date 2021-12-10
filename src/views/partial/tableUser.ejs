@@ -5,13 +5,13 @@
         <label for="checkbox1"></label>
       </span>
     </td>
-    <td><%= user.nombre %></td>
-    <td><%= user.apellido %></td>
-    <td><%= user.mail %></td>
-    <td><%= user.direccion %></td>
-    <td><%= user.telefono %></td>
-    <td><%= user.fechaNacimiento %></td>
-    <td><%= user.Provincia.nombre %></td>
+    <td><%= user?.nombre %></td>
+    <td><%= user?.apellido %></td>
+    <td><%= user?.mail %></td>
+    <td><%= user?.direccion %></td>
+    <td><%= user?.telefono %></td>
+    <td><%= user?.fechaNacimiento %></td>
+    <td><%= user?.Provincia?.nombre %></td>
     <td>
       <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
       <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>

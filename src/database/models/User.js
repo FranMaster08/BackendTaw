@@ -29,7 +29,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     mail: {
       type: DataTypes.STRING(45),
-      allowNull: false
+      allowNull: false,
+      unique: "mail_UNIQUE"
     },
     password: {
       type: DataTypes.STRING(45),
@@ -62,6 +63,14 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "id" },
+        ]
+      },
+      {
+        name: "mail_UNIQUE",
+        unique: true,
+        using: "BTREE",
+        fields: [
+          { name: "mail" },
         ]
       },
       {
