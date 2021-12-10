@@ -2,15 +2,7 @@
 <html lang="en">
   <%- include('partial/head') %>
 <body>
-  <ul>
-    <% if (errores) { %>
-      <ul>
-        <% errores.forEach(function(err){ %>
-            <li>err</li>
-        <% }); %>
-      </ul>
-    <% } %>
-  </ul>
+
   <img class="imagelogo" src="./images/icono.png" alt="" srcset="">
   <form class="formularioLogin" action="/users/login" method="post">
     <div>
